@@ -51,7 +51,7 @@ public class Max_subarray_sum{
         cs = cs + arr[i];
         if(cs < 0){
             cs = 0;
-        }
+        }   
         if(cs > ms){
             ms = cs;
         }
