@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.Arrays;
 import java.util.Set;
 
- public class threesum{
+public class threesum{
 
 
 //brute force approach
@@ -27,13 +27,43 @@ import java.util.Set;
       List<List<Integer>> ans = new ArrayList<>(st);
       return ans;
     }
-    public static void main(String[] ar){githu
+
+
+//better approch
+    static List<List<Integer>> findTriplet2(int[] arr){
+        Set<List<Integer>> set = new HashSet<>();
+
+        for(int i = 0; i< arr.length; i++){
+            Set<Integer> v = new HashSet<>();
+
+            for(int j = i+1 ;j< arr.length; j++){
+               int third = -  (arr[i] + arr[j]);
+               if(v.contains(third)){
+                List<Integer> temp = Arrays.asList(arr[i], arr[j], third);
+                temp.sort(null);
+                set.add(temp);
+               }
+
+               v.add(arr[j]);
+            }
+        }
+
+        List<List<Integer>> ans = new ArrayList<>(set);
+        return ans;
+
+    }
+    public static void main(String[] ar){
        int[] arr = {-1,0,1,2,-1,-4};
        List<List<Integer>> l= new ArrayList<>();
-
+       List<List<Integer>> l2= new ArrayList<>();
        //brute force 
        l = findTriplet(arr);
        System.out.println(l);
+
+       //brute force 
+       l2 = findTriplet2(arr);
+       System.out.println(l2);
+
     }
 }
 
