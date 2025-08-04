@@ -28,15 +28,14 @@ public class Max_subarray_sum{
         }
 
         for(int i =0; i < arr.length; i++){
-            for(int j=0; j< arr.length; j++){
-               
+            for(int j=i; j< arr.length; j++){
                curSum =  i == 0? prefixarr[j]: prefixarr[j] - prefixarr[i - 1];
-
                if(curSum > maxSum){
                 maxSum = curSum;
                } 
             }
         }
+        
 
         return maxSum;
     }
