@@ -103,15 +103,15 @@ public class threesum{
        //brute force 
        l = findTriplet(arr);
        System.out.println(l);
-
+System.out.println("----------------------");
        //optimal force 
        l2 = findTriplet2(arr);
        System.out.println(l2);
-
+System.out.println("----------------------");
        //optimal approach 
        l3 = findTriplet3(arr);
        System.out.println(l3);
-
+System.out.println("----------------------");
     }
 }
 
