@@ -17,7 +17,7 @@ public class Max_subarray_sum{
         return maxsum;
     }
     //optimal
-    static int maxSubarraySum2(int[] arr){
+    static int maxSubarraySum2(int[] arr){ 
         int[] prefixarr = new int[arr.length];
         int curSum = Integer.MIN_VALUE;
         int maxSum = Integer.MIN_VALUE;

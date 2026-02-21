@@ -11,8 +11,14 @@ public class set {
         System.out.println(set.contains(2));
         System.out.println(set.size());
 
-        set.clear();
+       // set.clear();
         System.out.println(set);
         System.out.println(set.isEmpty());
+
+        //iteration
+        Iterator it = set.iterator();
+        while (it.hasNext()) {
+            System.out.println(it.next());
+        }
     }
 }
